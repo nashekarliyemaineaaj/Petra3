@@ -220,9 +220,9 @@ else:
 
 
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
-telethn = TelegramClient("Petra", API_ID, API_HASH)
+telethn = TelegramClient("SungJinwoo", API_ID, API_HASH)
 pbot = Client("PetraPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
-pgram = Client("Petra", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+pgram = Client("PetraRobot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 mongo_client = MongoClient(MONGO_DB_URI)
 db = mongo_client.Petra
 dispatcher = updater.dispatcher
@@ -234,7 +234,7 @@ DEMONS = list(DEMONS)
 TIGERS = list(TIGERS)
 
 # Load at end to ensure all prev variables have been set
-from Petra.modules.helper_funcs.handlers import (
+from SungJinwooRobot.modules.helper_funcs.handlers import (
     CustomCommandHandler,
     CustomMessageHandler,
     CustomRegexHandler,
