@@ -9,7 +9,7 @@ from pyrogram import Client, errors
 from aiogram import Bot, Dispatcher, types
 from aiogram.bot.api import TELEGRAM_PRODUCTION, TelegramAPIServer
 from aiogram.contrib.fsm_storage.redis import RedisStorage2
-from Petra import get_bool_key, get_int_key, get_list_key, get_str_key
+from Petra.config import get_bool_key, get_int_key, get_list_key, get_str_key
 from Petra.utils.logger import log
 
 import telegram.ext as tg
@@ -204,7 +204,7 @@ else:
 
     try:
         BLACKLIST_CHATS = {int(x) for x in os.environ.get('BLACKLIST_CHATS', "").split()}
-    except ValueError:
+    except ValueError:p
         raise Exception(
             "Your blacklisted chats list does not contain valid integers.")
 
@@ -222,7 +222,7 @@ else:
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("Petra", API_ID, API_HASH)
 pbot = Client("PetraPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
-pgram = Client("Petra", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+pgram = Client("Petra1", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 mongo_client = MongoClient(MONGO_DB_URI)
 db = mongo_client.Petra
 dispatcher = updater.dispatcher
