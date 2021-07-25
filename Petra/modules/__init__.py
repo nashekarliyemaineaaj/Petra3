@@ -1,4 +1,4 @@
-from Petra import LOAD, LOGGER, NO_LOAD
+from Petra.__init__.py import LOAD, LOGGER, NO_LOAD
 
 
 def __list_all_modules():
