@@ -74,33 +74,31 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Hello` [🙋🏻‍](https://telegra.ph/file/cbad2a4725b43314dc340.jpg) `My name is` *Senku*
-`I'm here to help you manage your groups`. 
+𝗛𝗲𝗹𝗹𝗼 𝘁𝗵𝗲𝗿𝗲 [🤗](https://telegra.ph/file/700fbfe4ce0707eba82b0.jpg),𝗡𝗶𝗰𝗲 𝘁𝗼 𝗺𝗲𝗲𝘁 𝘆𝗼𝘂. 
+𝗜 𝗮𝗺 𝗣𝗲𝘁𝗿𝗮 𝗥𝗮𝗹 𝗙𝗿𝗼𝗺 𝗔𝘁𝘁𝗮𝗰𝗸 𝗢𝗻 𝗧𝗶𝘁𝗮𝗻.
+𝗜 𝗰𝗮𝗻 𝗵𝗲𝗹𝗽 𝘆𝗼𝘂 𝗶𝗻 𝗺𝗮𝗻𝗮𝗴𝗶𝗻𝗴 𝘆𝗼𝘂𝗿 𝗴𝗿𝗼𝘂𝗽𝘀 𝗲𝗳𝗳𝗶𝗰𝗶𝗲𝗻𝘁𝗹𝘆!
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ Add SENKU TO YOUR GROUP ➕️", url="t.me/Senkubest_bot?startgroup=true"),
+            text="❤️Add Petra to your Group", url="https://t.me/PetraRalRobot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="🔰ABOUT", callback_data="kurumi_"),
-        InlineKeyboardButton(text=" ⚙COMMANDS", callback_data="help_back"),
+        InlineKeyboardButton(text="Help", callback_data="kurumi_"),
+        InlineKeyboardButton(text=" Commands", callback_data="help_back"),
     ],
-    [
-        InlineKeyboardButton(text="🚨Support", url="https://t.me/myawesomebot21"),
-        InlineKeyboardButton(text="❗Updates", url="https://t.me/senkubotupdates"),
-   
-    ], 
+    
 ]
 
 
 HELP_STRINGS = """
-`Hi.. I'm` [🙋🏻](https://telegra.ph/file/cbad2a4725b43314dc340.jpg)
-`Click on the buttons below to know about specific modules..`"""
+Yo! I'm Petra Ral! [👋](https://telegra.ph/file/bc8efaf20008a466e2edc.jpg)
+Click on the buttons below to know about specific modules.."""
 
 
 KURUMI_IMG = "https://telegra.ph/file/78a95df585a55187568ee.jpg"
+PETRASTART = "https://telegra.ph/file/0829789103f2779250f11.mp4"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 Click here to donate in [Paypal](https://www.paypal.me/zameeljaz)"""
@@ -212,10 +210,9 @@ def start(update: Update, context: CallbackContext):
                 timeout=60,
             )
     else:
-        update.effective_message.reply_text(
-            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>"
-            .format(uptime),
-            parse_mode=ParseMode.HTML)
+      
+        update.effective_message.reply_video(
+                PETRASTART, caption=f"Ouch! I am alive , lol!")
 
 
 def error_handler(update, context):
@@ -346,7 +343,7 @@ def kurumi_about_callback(update, context):
     query = update.callback_query
     if query.data == "kurumi_":
         query.message.edit_text(
-            text=""" ℹ️ I'm *Senku*, a powerful group management bot built to help you manage your group easily. 
+            text=""" ℹ️ I'm *Petra*, a powerful group management bot built to help you manage your group easily. 
                  \n❍ I can restrict users.
                  \n❍ I can greet users with customizable welcome messages and set group's rules.
                  \n❍ I have an anti-flood system which will stop users from spamming and flooding the group. 
@@ -378,7 +375,7 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..🤗 I'm *Senku*
+            text=""" Hi..🤗 I'm *Petra*
                  \nHere is the [Source Code](https://github.com/asadali32117/Senku) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
