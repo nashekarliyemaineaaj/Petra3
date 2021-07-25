@@ -204,7 +204,7 @@ else:
 
     try:
         BLACKLIST_CHATS = {int(x) for x in os.environ.get('BLACKLIST_CHATS', "").split()}
-    except ValueError:p
+    except ValueError:
         raise Exception(
             "Your blacklisted chats list does not contain valid integers.")
 
