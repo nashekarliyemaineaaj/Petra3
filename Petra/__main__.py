@@ -97,7 +97,7 @@ Yo! I'm Petra Ral! [👋](https://telegra.ph/file/bc8efaf20008a466e2edc.jpg)
 Click on the buttons below to know about specific modules.."""
 
 
-KURUMI_IMG = "https://telegra.ph/file/78a95df585a55187568ee.jpg"
+PETRA_IMG = "https://telegra.ph/file/2a7843e7a1ae255c8882a.jpg"
 PETRASTART = "https://telegra.ph/file/0829789103f2779250f11.mp4"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
@@ -212,7 +212,10 @@ def start(update: Update, context: CallbackContext):
     else:
       
         update.effective_message.reply_video(
-                PETRASTART, caption=f"Ouch! I am alive , lol!")
+                PETRASTART, caption= "Ouch! I am awake, lol! Haven't slept Since:</b><code>{}</code>".format(
+                uptime"),
+            parse_mode=ParseMode.HTML,
+        )
 
 
 def error_handler(update, context):
@@ -376,7 +379,7 @@ def Source_about_callback(update, context):
     if query.data == "source_":
         query.message.edit_text(
             text=""" Hi..🤗 I'm *Petra*
-                 \nHere is the [Source Code](https://github.com/asadali32117/Petra3) .""",
+                 \nHere is the [Source Code](https://github.com/asadali32117/Senku) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -406,7 +409,7 @@ def get_help(update: Update, context: CallbackContext):
         if len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
             module = args[1].lower()
             update.effective_message.reply_text(
-              KURUMI_IMG, caption=f"Contact me in PM to get help of {module.capitalize()}",
+              PETRA_IMG, caption=f"Contact me in PM to get help of {module.capitalize()}",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
