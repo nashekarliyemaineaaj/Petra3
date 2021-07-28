@@ -219,12 +219,6 @@ def start(update: Update, context: CallbackContext):
         )
 
 
-  PETRASTART, caption= "Ouch! I am awake, lol! Haven't slept Since:</b><code>{}</code>".format(
-                uptime),
-            parse_mode=ParseMode.HTML,
-        )
-
-
 def error_handler(update, context):
     """Log the error and send a telegram message to notify the developer."""
     # Log the error before we do anything else, so we can see it even if something breaks.
