@@ -213,7 +213,7 @@ def start(update: Update, context: CallbackContext):
       
         update.effective_message.reply_video(
                 PETRASTART, caption= "Ouch! I am awake, lol! Haven't slept Since:</b><code>{}</code>".format(
-                uptime"),
+                uptime),
             parse_mode=ParseMode.HTML,
         )
 
