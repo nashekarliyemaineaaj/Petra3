@@ -76,4 +76,4 @@ NumPy
 opencv-python-headless
 Pillow
 ffmpeg-python
-humanize
+
