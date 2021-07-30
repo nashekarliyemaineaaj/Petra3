@@ -9,7 +9,7 @@ from telegram.ext import Filters, MessageHandler, run_async
 
 from Petra import dispatcher
 from Petra.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
-from Petra.modules.sql.afk_redis import start_afk, end_afk, is_user_afk, afk_reason
+from Petra.modules.redis.afk_redis import start_afk, end_afk, is_user_afk, afk_reason
 from Petra import REDIS
 from Petra.modules.users import get_user_id
 
