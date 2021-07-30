@@ -6,9 +6,6 @@ import time
 import spamwatch
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 from pyrogram import Client, errors
-from aiogram import Bot, Dispatcher, types
-from aiogram.bot.api import TELEGRAM_PRODUCTION, TelegramAPIServer
-from aiogram.contrib.fsm_storage.redis import RedisStorage2
 from redis import StrictRedis
 from Petra.config import get_bool_key, get_int_key, get_list_key, get_str_key
 from Petra.utils.logger import log
@@ -44,12 +41,6 @@ OWNER_ID = get_int_key("OWNER_ID", required=True)
 LOGS_CHANNEL_ID = get_int_key("LOGS_CHANNEL_ID", required=True)
 OPERATORS = list(get_list_key("OPERATORS"))
 OPERATORS.append(OWNER_ID)
-bot = Bot(token=TOKEN, parse_mode=types.ParseMode.HTML, server=server)
-storage = RedisStorage2(
-    host=get_str_key("REDIS_URI"),
-    port=get_int_key("REDIS_PORT"),
-    password=get_str_key("REDIS_PASS"),
-)
 dp = Dispatcher(bot, storage=storage)
 loop = asyncio.get_event_loop()
 SUPPORT_CHAT = get_str_key("SUPPORT_CHAT", required=True)
