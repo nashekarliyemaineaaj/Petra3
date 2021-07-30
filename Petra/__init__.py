@@ -39,7 +39,6 @@ OPERATORS.append(OWNER_ID)
 loop = asyncio.get_event_loop()
 SUPPORT_CHAT = get_str_key("SUPPORT_CHAT", required=True)
 log.debug("Getting bot info...")
-bot_info = loop.run_until_complete(bot.get_me())
 BOT_USERNAME = bot_info.username
 BOT_ID = bot_info.id
 
