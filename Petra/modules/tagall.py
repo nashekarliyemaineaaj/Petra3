@@ -30,7 +30,8 @@ async def tagall(client, message):
         await client.send_message(message.chat.id, j, parse_mode="html")
 
 
-_mod_name_ = "Tagall"
-_help_ = """
-- /tagall : Tag everyone in a chat
+__mod_name__ = "Tagger"
+__help__ = """
+   **For Admins**
+  • /tagall : Tag everyone in a chat.
 """
