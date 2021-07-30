@@ -31,18 +31,6 @@ if sys.version_info[0] < 3 or sys.version_info[1] < 6:
     )
     quit(1)
 
-TOKEN = get_str_key("TOKEN", required=True)
-OWNER_ID = get_int_key("OWNER_ID", required=True)
-LOGS_CHANNEL_ID = get_int_key("LOGS_CHANNEL_ID", required=True)
-OPERATORS = list(get_list_key("OPERATORS"))
-OPERATORS.append(OWNER_ID)
-loop = asyncio.get_event_loop()
-SUPPORT_CHAT = get_str_key("SUPPORT_CHAT", required=True)
-log.debug("Getting bot info...")
-BOT_USERNAME = bot_info.username
-BOT_ID = bot_info.id
-
-    
     
 ENV = bool(os.environ.get("ENV", False))
 
