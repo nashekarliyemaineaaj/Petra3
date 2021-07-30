@@ -31,11 +31,6 @@ if sys.version_info[0] < 3 or sys.version_info[1] < 6:
     )
     quit(1)
 
-# Support for custom BotAPI servers
-if url := get_str_key("BOTAPI_SERVER"):
-    server = TelegramAPIServer.from_base(url)
-else:
-    server = TELEGRAM_PRODUCTION
 TOKEN = get_str_key("TOKEN", required=True)
 OWNER_ID = get_int_key("OWNER_ID", required=True)
 LOGS_CHANNEL_ID = get_int_key("LOGS_CHANNEL_ID", required=True)
