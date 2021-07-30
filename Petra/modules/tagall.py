@@ -9,7 +9,7 @@
 
 from pyrogram import filters
 
-from Petra.function.pluginhelpers import admins_only, get_text
+from Petra.utils.pluginhelp import admins_only, get_text
 from Petra import pbot
 
 
