@@ -119,7 +119,7 @@ if ENV:
     LASTFM_API_KEY = os.environ.get("LASTFM_API_KEY", None)
     API_WEATHER = os.environ.get("API_OPENWEATHER", None)
     WALL_API = os.environ.get("WALL_API", None)
-    REDIS_URI = os.environ.get("REDIS_URI")
+    REDIS_URL = os.environ.get("REDIS_URL")
     SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", None)
     SPAMWATCH_SUPPORT_CHAT = os.environ.get("SPAMWATCH_SUPPORT_CHAT", None)
     SPAMWATCH_API = os.environ.get("SPAMWATCH_API", None)
@@ -221,7 +221,7 @@ else:
     sw = spamwatch.Client(SPAMWATCH_API)
 
 
-REDIS = StrictRedis.from_url(REDIS_URI,decode_responses=True)
+REDIS = StrictRedis.from_url(REDIS_URL,decode_responses=True)
 try:
     REDIS.ping()
     LOGGER.info("Your redis server is now alive!")
