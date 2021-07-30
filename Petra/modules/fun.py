@@ -41,7 +41,7 @@ def knife(update: Update, context: CallbackContext):
     name = message.reply_to_message.from_user.first_name if message.reply_to_message else message.from_user.first_name
     reply_animation = message.reply_to_message.reply_animation if message.reply_to_message else message.reply_animation
     reply_animation(
-        random.choice(fun_strings.KNIFE), caption=f'*Attacks {name} with knives*')
+        random.choice(fun_strings.KNIFE), caption=f'**Attacks {name} with knives**')
 
 
 
