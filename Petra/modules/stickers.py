@@ -465,13 +465,6 @@ async def handler(event):
     file = await bot.download_media(reply_message)
     msg = await event.reply("Memifying this image! Please wait")
 
-    if "Kittu" in Credit:
-       pass
-
-    else: 
-       await event.reply("this nigga removed credit line from code")
-    text = str(event.pattern_match.group(1)).strip()
-
     if len(text) < 1:
         return await msg.reply("You might want to try `/mmf text`")
     meme = await drawText(file, text)
@@ -492,7 +485,7 @@ async def drawText(image_path, text):
     if os.name == "nt":
         fnt = "ariel.ttf"
     else:
-        fnt = "./SaitamaRobot/resources/ArmWrestler.ttf"
+        fnt = "./Petra/resources/ArmWrestler.ttf"
     m_font = ImageFont.truetype(fnt, int((70 / 640) * i_width))
     if ";" in text:
         upper_text, lower_text = text.split(";")
