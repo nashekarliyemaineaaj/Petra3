@@ -12,9 +12,12 @@ from telegram import TelegramError, Update
 from telegram.ext import run_async, CallbackContext
 from telegram.utils.helpers import mention_html
 
-from Petra import pbot as Petra
 from Petra import dispatcher
 from Petra.modules.disable import DisableAbleCommandHandler
+from Petra.events import register as Cutiepii
+from Petra import LOGGER
+from Petra import TEMP_DOWNLOAD_DIRECTORY
+
 
 combot_stickers_url = "https://combot.org/telegram/stickers?q="
 
