@@ -14,7 +14,7 @@ from telegram.utils.helpers import mention_html
 
 from Petra import dispatcher
 from Petra.modules.disable import DisableAbleCommandHandler
-from Petra.events import register as Cutiepii
+from Petra.events import register as Petra
 from Petra import LOGGER
 from Petra import TEMP_DOWNLOAD_DIRECTORY
 
