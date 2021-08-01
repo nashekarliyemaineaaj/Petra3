@@ -468,7 +468,9 @@ async def handler(event):
     file = await bot.download_media(reply_message)
     msg = await event.reply("Memifying this image! Please wait")
 
-    if len(text) < 1:
+    text = str(event.pattern_match.group(1)).strip()
+
+     if len(text) < 1:
         return await msg.reply("You might want to try `/mmf text`")
     meme = await drawText(file, text)
     await bot.send_file(event.chat_id, file=meme, force_document=False)   
