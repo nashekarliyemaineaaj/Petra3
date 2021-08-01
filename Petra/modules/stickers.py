@@ -17,7 +17,7 @@ from Petra.modules.disable import DisableAbleCommandHandler
 from Petra.events import register as Petra
 from Petra import LOGGER
 from Petra import TEMP_DOWNLOAD_DIRECTORY
-
+from Petra import telethn as bot
 
 combot_stickers_url = "https://combot.org/telegram/stickers?q="
 
