@@ -470,7 +470,7 @@ async def handler(event):
 
     text = str(event.pattern_match.group(1)).strip()
 
-     if len(text) < 1:
+    if len(text) < 1:
         return await msg.reply("You might want to try `/mmf text`")
     meme = await drawText(file, text)
     await bot.send_file(event.chat_id, file=meme, force_document=False)   
