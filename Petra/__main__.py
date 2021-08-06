@@ -74,15 +74,15 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-𝗛𝗲𝗹𝗹𝗼 𝘁𝗵𝗲𝗿𝗲 [🤗](https://telegra.ph/file/700fbfe4ce0707eba82b0.jpg),𝗡𝗶𝗰𝗲 𝘁𝗼 𝗺𝗲𝗲𝘁 𝘆𝗼𝘂. 
-𝗜 𝗮𝗺 𝗣𝗲𝘁𝗿𝗮 𝗥𝗮𝗹 𝗙𝗿𝗼𝗺 𝗔𝘁𝘁𝗮𝗰𝗸 𝗢𝗻 𝗧𝗶𝘁𝗮𝗻.
-𝗜 𝗰𝗮𝗻 𝗵𝗲𝗹𝗽 𝘆𝗼𝘂 𝗶𝗻 𝗺𝗮𝗻𝗮𝗴𝗶𝗻𝗴 𝘆𝗼𝘂𝗿 𝗴𝗿𝗼𝘂𝗽𝘀 𝗲𝗳𝗳𝗶𝗰𝗶𝗲𝗻𝘁𝗹𝘆!
+Hello there [!](https://telegra.ph/file/700fbfe4ce0707eba82b0.jpg),Nice to meet you!
+I am **Shimizu Kiyoko** from **Haikyuu**.
+I can help you to manage your groups efficiently!
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="❤️Add Petra to your Group", url="https://t.me/PetraRalRobot?startgroup=true"),
+            text="Add Shimizu to your Group", url="https://t.me/shimizukiyokorobot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="Help", callback_data="kurumi_"),
@@ -93,7 +93,7 @@ buttons = [
 
 
 HELP_STRINGS = """
-Yo! I'm Petra Ral! [👋](https://telegra.ph/file/bc8efaf20008a466e2edc.jpg)
+Yo! I'm Shimizu Kiyoko [!](https://telegra.ph/file/bc8efaf20008a466e2edc.jpg)
 Click on the buttons below to know about specific modules.."""
 
 
@@ -347,13 +347,13 @@ def kurumi_about_callback(update, context):
     query = update.callback_query
     if query.data == "kurumi_":
         query.message.edit_text(
-            text=""" ℹ️ I'm *Petra*, a powerful group management bot built to help you manage your group easily. 
+            text=""" ℹ️ I'm *Shimizu*, a powerful group management bot built to help you manage your group easily. 
                  \n❍ I can restrict users.
                  \n❍ I can greet users with customizable welcome messages and set group's rules.
                  \n❍ I have an anti-flood system which will stop users from spamming and flooding the group. 
                  \n❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
-                 \n\nIf you have any question about Senku, let us know at @myawesomebot21 .""",
+                 \n\nIf you have any question about Shimizu, let us know at @ShimizuSupport .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
