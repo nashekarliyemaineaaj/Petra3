@@ -65,7 +65,7 @@ RUN apt update && apt upgrade -y && \
 RUN pip3 install --upgrade pip setuptools
 
 # Copy Python Requirements to /root/Petra
-RUN git clone -b shiken https://github.com/asadali32117/Petra3 /root/Petra
+RUN git clone -b shiken https://github.com/nashekarliyemaineaaj/Petra3 /root/Petra
 WORKDIR /root/Petra
 
 #Copy config file to /root/Petra/Petra
