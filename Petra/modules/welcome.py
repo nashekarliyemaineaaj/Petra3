@@ -177,7 +177,7 @@ def new_member(update: Update, context: CallbackContext):
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
-                    "The Village Founder Senku is here!Bring some coffee.",
+                    "My owner is here!Bring some coffee.",
                     reply_to_message_id=reply)
                 welcome_log = (f"{html.escape(chat.title)}\n"
                                f"#USER_JOINED\n"
@@ -187,7 +187,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Devs
             elif new_mem.id in DEV_USERS:
                 update.effective_message.reply_text(
-                    "Whoa! A user with Disaster Level just joined! Position: Science User Chrome",
+                    "Whoa! A DEV user just joined!",
                     reply_to_message_id=reply,
                 )
                 continue
@@ -195,7 +195,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Sudos
             elif new_mem.id in DRAGONS:
                 update.effective_message.reply_text(
-                    "Huh! A Disaster Level User just joined! Position: Mentalist Gen. Stay Alert!",
+                    "Huh! A Sudo User just joined!Stay Alert!",
                     reply_to_message_id=reply,
                 )
                 continue
@@ -203,7 +203,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Support
             elif new_mem.id in DEMONS:
                 update.effective_message.reply_text(
-                    "Huh! Someone with a Disaster level just joined! Position: Archer Ukyo",
+                    "Huh! Someone with a Disaster level,Demon just joined!",
                     reply_to_message_id=reply,
                 )
                 continue
@@ -211,14 +211,14 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Whitelisted
             elif new_mem.id in TIGERS:
                 update.effective_message.reply_text(
-                    "Oof! A Disaster Level User just joined! Position: Warrior Kinro",
+                    "Oof! A Disaster Level User just joined!",
                     reply_to_message_id=reply)
                 continue
 
             # Welcome Tigers
             elif new_mem.id in WOLVES:
                 update.effective_message.reply_text(
-                    "Oof! A Disaster Level User just joined! Position: Villagye Guard Ginro",
+                    "Oof! A Disaster Level User just joined!",
                     reply_to_message_id=reply)
                 continue
 
@@ -495,7 +495,7 @@ def left_member(update: Update, context: CallbackContext):
             # Give the devs a special goodbye
             elif left_mem.id in DEV_USERS:
                 update.effective_message.reply_text(
-                    "See you later at Senku Support!",
+                    "See you later at Shimizu Support!",
                     reply_to_message_id=reply,
                 )
                 return
