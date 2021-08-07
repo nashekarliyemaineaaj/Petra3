@@ -100,7 +100,7 @@ buttons = [
 
 
 HELP_STRINGS = """
-Yo! I'm Shimizu Kiyoko [!](https://telegra.ph/file/92cbf2ae0cce2c431e352.jpg)
+Yo! I'm Shimizu Kiyoko [!](https://telegra.ph/file/910e023256e4a26067086.jpg)
 Click on the buttons below to know about specific modules.."""
 
 
