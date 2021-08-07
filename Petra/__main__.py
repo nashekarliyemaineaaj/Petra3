@@ -87,7 +87,7 @@ buttons = [
     [
         InlineKeyboardButton(text="Help", callback_data="kurumi_"),
 
-        InlineKeyboardButton(text=" Commands", callback_data="help_back"),
+        InlineKeyboardButton(text="Commands", callback_data="help_back"),
     ],
 
     [
@@ -104,8 +104,8 @@ Yo! I'm Shimizu Kiyoko [!](https://telegra.ph/file/92cbf2ae0cce2c431e352.jpg)
 Click on the buttons below to know about specific modules.."""
 
 
-PETRA_IMG = "https://telegra.ph/file/2a7843e7a1ae255c8882a.jpg"
-PETRASTART = "https://telegra.ph/file/0829789103f2779250f11.mp4"
+PETRA_IMG = "https://telegra.ph/file/43777b0c4e6b21f418ef7.mp4"
+PETRASTART = "https://telegra.ph/file/43777b0c4e6b21f418ef7.mp4"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 Click here to donate in [Paypal](https://www.paypal.me/zameeljaz)"""
@@ -386,8 +386,8 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..🤗 I'm *Petra*
-                 \nHere is the [Source Code](https://github.com/asadali32117/Senku) .""",
+            text=""" Hi.. I'm *Shimizu*
+                 \nHere is the [Source Code](https://github.com/nashekarliyemaineaaj/Petra3) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
