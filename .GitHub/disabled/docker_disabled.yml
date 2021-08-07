@@ -24,7 +24,7 @@ jobs:
 
         with:
 
-          name:  asadali32117/Petra
+          name:  nashekarliyemaineaaj/Petra3
 
           username: ${{ secrets.DOCKER_USERNAME }}
 
